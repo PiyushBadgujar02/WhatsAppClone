@@ -149,7 +149,10 @@ router.post('/file/upload',upload.single('file'),async (req,res)=>{
             return res.status(400).json('file not found ');
         }
 
-        const imgurl=`http://localhost:8080/files/${req.file.filename}`;
+        // const imgurl=`http://localhost:8080/files/${req.file.filename}`;
+        const imgurl=`https://whats-app-clone-psi-roan.vercel.app/files/${req.file.filename}`;
+
+        
     
         return res.status(200).json(imgurl);
     }catch(error){
